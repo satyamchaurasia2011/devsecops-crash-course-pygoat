@@ -27,7 +27,7 @@ jobs:
     
    - name: Upload Artifact
      uses: actions/upload-artifact@v3
-     if: always #whether previous failed or succeeded this should always run.
+     if: always() #whether previous failed or succeeded this should always run.
      with:
        name: bandit-findings
        path: bandit-report.json
